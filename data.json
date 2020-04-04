@@ -1,0 +1,21 @@
+speed_data = [
+    {
+        "measurement" : "Miner-George-stats",
+        "tags" : {
+            "host": "George-1",
+            "upTime":float(miner_uptime),
+            "totalShares":int(invalid_shares),
+            "totalHashrate":int(totalHashrate/1000),
+            "powerConsumed":int(powerConsumed),
+            "name": "GPU "+str(i)
+        },
+        "time": time.strftime('%Y-%m-%dT%H:%M:%S', time.localtime(item[1])),
+        "fields" : {
+            "temperature":int(temp[i]),
+            "hashrate":int(totalHashrate[i]),
+            "fanSpeed": int(fans[i]),
+            "shares": int(shares[i]),
+            "invalidShares":int(invalid_shares[i])
+        }
+    }
+]

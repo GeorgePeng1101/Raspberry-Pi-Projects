@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  claymore_monitoring:
+    container_name: claymore_monitoring
+    build: .
+    command: python ethmon.py
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
